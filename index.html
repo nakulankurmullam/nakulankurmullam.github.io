@@ -82,5 +82,11 @@ function solve() {
 function clr(){
     document.getElementById("screen").value = "";
 }
+ async function loadQuest(){
+    let res = await fetch('https://opentdb.com/api.php?amount=10')
+    let data = await res.json()
+    document.getElementById("screen").value = data
+ }
+ loadQuest()
 </script>
 <!--<script src="app.js"></script>-->
